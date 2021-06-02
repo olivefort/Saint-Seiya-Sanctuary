@@ -1,0 +1,297 @@
+{
+    "key": "group_6076f0b4d879a",
+    "title": "Armures",
+    "fields": [
+        {
+            "key": "field_6078586bb89f1",
+            "label": "Nom",
+            "name": "armor_name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6076f182679f8",
+            "label": "Porteurs",
+            "name": "wearer",
+            "type": "post_object",
+            "instructions": "Saisir le ou les noms des personnes qui ont portés cette armure",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "personnage"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_6076fb17b6ed7",
+            "label": "Avatar",
+            "name": "avatar",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg, jpeg, gif, png, svg"
+        },
+        {
+            "key": "field_60a28e9e0cc5a",
+            "label": "Bouton Retour",
+            "name": "boutonlink",
+            "type": "post_object",
+            "instructions": "Quel est la catégorie de cette armure ?",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "catarmure"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_6076fc16b6ed8",
+            "label": "Version",
+            "name": "version",
+            "type": "true_false",
+            "instructions": "Est ce que cette armure possède d'autre version que la version originale de base (V1)\r\nExemple : L'armure de Pégase possède la V2, V3, divine etc en plus de la version originale",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_609431c4d4a00",
+            "label": "Version Link",
+            "name": "version_link",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6076fc16b6ed8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 7,
+            "layout": "table",
+            "button_label": "Ajouter une version",
+            "sub_fields": [
+                {
+                    "key": "field_60943379d4a02",
+                    "label": "Type de version",
+                    "name": "version_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "V2": "V2",
+                        "V3": "V3",
+                        "Noire": "Noire",
+                        "Gold": "Gold",
+                        "Divine": "Divine",
+                        "Oméga": "Oméga",
+                        "Surplis": "Surplis"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60957e924dfe3",
+                    "label": "Image",
+                    "name": "version_img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_607708ef7570f",
+            "label": "Apparition",
+            "name": "apparition",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Originale": "Originale",
+                "Episode G": "Episode G",
+                "The Lost Canvas": "The Lost Canvas",
+                "Next Dimension": "Next Dimension",
+                "Gigantomachia": "Gigantomachia",
+                "Omega": "Omega",
+                "Saintia Sho": "Saintia Sho",
+                "Soul of Gold": "Soul of Gold",
+                "Origin": "Origin",
+                "Meiô Iden Dark Wing": "Meiô Iden Dark Wing",
+                "OAV - Les Guerriers d'Abel": "OAV - Les Guerriers d'Abel",
+                "OAV - La Légende de la Pomme d'Or": "OAV - La Légende de la Pomme d'Or",
+                "OAV - La Guerre des Dieux": "OAV - La Guerre des Dieux",
+                "OAV - Le Dieu des Enfers": "OAV - Le Dieu des Enfers",
+                "OAV - Chapitre du Monde Céleste, Ouverture": "OAV - Chapitre du Monde Céleste, Ouverture",
+                "Film - La Légende du Sanctuaire": "Film - La Légende du Sanctuaire"
+            },
+            "allow_custom": 1,
+            "save_custom": 1,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_607711a02901a",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_6094172c9cb00",
+            "label": "Galerie",
+            "name": "galery",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg, jpeg, png, svg, gif"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "armure"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1621272941
+}
